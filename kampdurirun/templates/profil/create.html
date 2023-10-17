@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <h1>Create Profile</h1>
+    <form method="post" action="{% url 'create_profil' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.informasi_kesehatan.label_tag }} {{ form.informasi_kesehatan }}
+        <br>
+        {{ form.tinggi_badan.label_tag }} {{ form.tinggi_badan }}
+        <br>
+        {{ form.berat_badan.label_tag }} {{ form.berat_badan }}
+        <br>
+        {{ form.golongan_darah.label_tag }} {{ form.golongan_darah }}
+        <br>
+        {{ form.catatan_kejahatan.label_tag }} {{ form.catatan_kejahatan }}
+        <br>
+        {{ form.nama_user.label_tag }} {{ form.nama_user }}
+        <br>
+        {{ form.jenis_kelamin.label_tag }} {{ form.jenis_kelamin }}
+        <br>
+        {{ form.kewarganegaraan.label_tag }} {{ form.kewarganegaraan }}
+        <br>
+        {{ form.agama.label_tag }} {{ form.agama }}
+        <br>
+        {{ form.is_kawin.label_tag }} {{ form.is_kawin }}
+        <br>
+        {{ form.gambar.label_tag }} {{ form.gambar }}
+        <br>
+        <input type="submit" value="Create Profile">
+    </form>    
+    
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Postingan-Postingan</h1>
+<a href="{% url 'make_posts' %}">Create Post</a>
+
+<div class="post-list">
+    {% for post in postingan_list %}
+    <div class="card">
+        <h2>{{ post.judul }}</h2>
+        <p>{{ post.deskripsi }}</p>
+        <a href="{{ post.lampiran_id_lampiran.dokumen_laporan.url }}">
+            <i class="fa fa-download"></i> Unduh File
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock content %}

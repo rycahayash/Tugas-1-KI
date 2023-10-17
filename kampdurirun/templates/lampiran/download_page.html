@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Download Lampiran: {{ id_dokumen }}</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Password</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    <h1 style="text-align: center; margin-top: 7em;">SELAMAT DATANG {{ request.user.username|upper }} DI KAMPUNG DURIAN RUNTUH</h1>
+{% else %}
+    <h1 style="text-align: center; margin-top: 7em;">SELAMAT DATANG DI KAMPUNG DURIAN RUNTUH</h1>
+{% endif %}
+
+{% endblock content %}
